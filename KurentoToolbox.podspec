@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
 # s.vendored_frameworks = 'WebRTC.framework'
 # s.resource = "WebRTC.framework"
 
-  s.dependency 'WebRTC'
+s.dependency 'WebRTC'
 
   s.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/KurentoToolbox"' }
 
