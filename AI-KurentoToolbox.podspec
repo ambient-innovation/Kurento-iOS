@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.version      = "0.5.1"
   s.summary      = "Kurento Toolbox for iOS modified by Ambient-Innovation"
   s.description  = <<-DESC
-                   Kurento Toolbox for iOS provides a set of basic components that have been found useful during the native development of the WebRTC applications with Kurento.
+                    This is a further development of the Kurento Toolbox for iOS and contains the latest version v0.5.0 of the original toolbox, as well as some fixes and modifications. Kurento Toolbox for iOS provides a set of basic components that have been found useful during the native development of the WebRTC applications with Kurento.
                    DESC
   s.homepage     = "https://github.com/ambient-innovation/Kurento-iOS"
 
