@@ -8,8 +8,6 @@ workspace 'Kurento-iOS'
 def common_target_pods
     pod 'CocoaLumberjack', :configurations => ['Debug']
     pod 'SBJson', '~> 4.0.2'
-#    pod 'libjingle_peerconnection', '~> 11177.2.0'
-    #pod 'nighthawk-webrtc', :podspec => './nighthawk-webrtc-chrome-m45-capture-xcode.podspec'
     pod 'SocketRocket', '~> 0.4.2'
 end
 
@@ -20,12 +18,12 @@ end
 
 target 'KurentoToolbox-Tests' do
     xcodeproj 'Kurento-iOS'
-    pod 'KurentoToolbox', :path => "."
+    pod 'AI-KurentoToolbox', :git => "https://github.com/ambient-innovation/Kurento-iOS.git"
 end
 
 target 'KurentoToolboxDemo' do
     xcodeproj 'KurentoToolboxDemo/KurentoToolboxDemo'
-    pod 'KurentoToolbox', :path => "."
+    pod 'AI-KurentoToolbox', :git => "https://github.com/ambient-innovation/Kurento-iOS.git"
     pod 'MBProgressHUD', '~> 0.9.2'
     pod 'Reachability', '~> 3.2'
     pod 'DGActivityIndicatorView'

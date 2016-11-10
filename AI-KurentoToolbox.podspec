@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
 
-  s.name         = "KurentoToolbox"
-  s.version      = "0.5.0"
-  s.summary      = "Kurento Toolbox for iOS"
+  s.name         = "AI-KurentoToolbox"
+  s.version      = "1.0.0"
+  s.summary      = "Kurento Toolbox for iOS modified by Ambient-Innovation"
   s.description  = <<-DESC
                    Kurento Toolbox for iOS provides a set of basic components that have been found useful during the native development of the WebRTC applications with Kurento.
                    DESC
@@ -10,29 +10,29 @@ Pod::Spec.new do |s|
 
   s.license      = { :type => "GNU LGPL 2.1", :file => "LICENSE" }
 
-  s.author = { "Marco Rossi" => "marco5.rossi@guest.telecomitalia.it" }
-  s.platform = :ios, "8.0"
+  s.author = { "Jan Buerling" => "jan.buerling@ambient-innovation.com" }
+  s.platform = :ios, "8.3"
 
-  s.source       = { :git => "https://github.com/ambient-innovation/Kurento-iOS.git", :tag => "v#{s.version}" }
+  s.source = { :git => "https://github.com/ambient-innovation/Kurento-iOS.git", :tag => "v#{s.version}" }
 
   s.default_subspecs = 'Default'
 
-s.dependency 'WebRTC'
+  s.dependency 'WebRTC'
 
-  s.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/KurentoToolbox"' }
+  s.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/AI-KurentoToolbox"' }
 
   s.subspec 'Default' do |ss|
     ss.source_files = 'Classes/KurentoToolbox.h'
-    ss.dependency 'KurentoToolbox/WebRTC'
-    ss.dependency 'KurentoToolbox/JSON-RPC'
-    ss.dependency 'KurentoToolbox/Room'
-    ss.dependency 'KurentoToolbox/Tree'
+    ss.dependency 'AI-KurentoToolbox/WebRTC'
+    ss.dependency 'AI-KurentoToolbox/JSON-RPC'
+    ss.dependency 'AI-KurentoToolbox/Room'
+    ss.dependency 'AI-KurentoToolbox/Tree'
   end
 
   s.subspec 'WebRTC' do |ss|
     ss.source_files = 'Classes/WebRTC/**/*.{h,m}'
     ss.public_header_files = 'Classes/WebRTC/*.h'
-    ss.dependency 'KurentoToolbox/Utils'
+    ss.dependency 'AI-KurentoToolbox/Utils'
   end
 
   s.subspec 'JSON-RPC' do |ss|
@@ -40,23 +40,23 @@ s.dependency 'WebRTC'
     ss.public_header_files = 'Classes/JSON-RPC/*.h'
     ss.dependency 'SocketRocket', '~> 0.4.1'
     ss.dependency 'SBJson', '~> 4.0.2'
-    ss.dependency 'KurentoToolbox/Utils'
+    ss.dependency 'AI-KurentoToolbox/Utils'
   end
   
   s.subspec 'Room' do |ss|
       ss.source_files = 'Classes/Room/**/*.{h,m}'
       ss.public_header_files = 'Classes/Room/*.h'
-      ss.dependency 'KurentoToolbox/JSON-RPC'
-      ss.dependency 'KurentoToolbox/WebRTC'
-      ss.dependency 'KurentoToolbox/Utils'
+      ss.dependency 'AI-KurentoToolbox/JSON-RPC'
+      ss.dependency 'AI-KurentoToolbox/WebRTC'
+      ss.dependency 'AI-KurentoToolbox/Utils'
   end
 
   s.subspec 'Tree' do |ss|
       ss.source_files = 'Classes/Tree/**/*.{h,m}'
       ss.public_header_files = 'Classes/Tree/*.h'
-      ss.dependency 'KurentoToolbox/JSON-RPC'
-      ss.dependency 'KurentoToolbox/WebRTC'
-      ss.dependency 'KurentoToolbox/Utils'
+      ss.dependency 'AI-KurentoToolbox/JSON-RPC'
+      ss.dependency 'AI-KurentoToolbox/WebRTC'
+      ss.dependency 'AI-KurentoToolbox/Utils'
   end
 
   s.subspec 'Utils' do |ss|
